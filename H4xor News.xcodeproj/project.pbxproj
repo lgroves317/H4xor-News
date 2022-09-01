@@ -11,6 +11,10 @@
 		550520CC28BFB5550093BD82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550520CB28BFB5550093BD82 /* ContentView.swift */; };
 		550520CE28BFB5560093BD82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550520CD28BFB5560093BD82 /* Assets.xcassets */; };
 		550520D128BFB5560093BD82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550520D028BFB5560093BD82 /* Preview Assets.xcassets */; };
+		550520D928BFBBFD0093BD82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550520D828BFBBFD0093BD82 /* NetworkManager.swift */; };
+		550520DB28BFC2BE0093BD82 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550520DA28BFC2BE0093BD82 /* PostData.swift */; };
+		55F880C628C048150054922D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F880C528C048150054922D /* DetailView.swift */; };
+		55F880C828C101080054922D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F880C728C101080054922D /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		550520CB28BFB5550093BD82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		550520CD28BFB5560093BD82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		550520D028BFB5560093BD82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		550520D828BFBBFD0093BD82 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		550520DA28BFC2BE0093BD82 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		55F880C528C048150054922D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		55F880C728C101080054922D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		55F880C928C105430054922D /* H4xor News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4xor News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		550520C828BFB5550093BD82 /* H4xor News */ = {
 			isa = PBXGroup;
 			children = (
+				55F880C928C105430054922D /* H4xor News.entitlements */,
+				550520D728BFBBD10093BD82 /* Models */,
 				550520C928BFB5550093BD82 /* H4xor_NewsApp.swift */,
-				550520CB28BFB5550093BD82 /* ContentView.swift */,
+				55F880C428C047DA0054922D /* Views */,
 				550520CD28BFB5560093BD82 /* Assets.xcassets */,
 				550520CF28BFB5560093BD82 /* Preview Content */,
 			);
@@ -65,6 +76,25 @@
 				550520D028BFB5560093BD82 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		550520D728BFBBD10093BD82 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				550520D828BFBBFD0093BD82 /* NetworkManager.swift */,
+				550520DA28BFC2BE0093BD82 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		55F880C428C047DA0054922D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				550520CB28BFB5550093BD82 /* ContentView.swift */,
+				55F880C528C048150054922D /* DetailView.swift */,
+				55F880C728C101080054922D /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550520D928BFBBFD0093BD82 /* NetworkManager.swift in Sources */,
+				550520DB28BFC2BE0093BD82 /* PostData.swift in Sources */,
 				550520CC28BFB5550093BD82 /* ContentView.swift in Sources */,
+				55F880C828C101080054922D /* WebView.swift in Sources */,
+				55F880C628C048150054922D /* DetailView.swift in Sources */,
 				550520CA28BFB5550093BD82 /* H4xor_NewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +298,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4xor News/H4xor News.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4xor News/Preview Content\"";
@@ -282,6 +318,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lgroves.H4xor-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,6 +330,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4xor News/H4xor News.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4xor News/Preview Content\"";
@@ -311,6 +350,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lgroves.H4xor-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
